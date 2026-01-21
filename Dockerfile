@@ -1,6 +1,7 @@
 FROM oven/bun:alpine AS base
-WORKDIR /usr/src/app
-
+RUN mkdir /app
+RUN chown bun:bun /app
+WORKDIR /app
 COPY main.ts .
 USER bun
 EXPOSE 3000/tcp
