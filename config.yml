@@ -1,6 +1,0 @@
-app:
-  site: https://example.com # your website
-  port: 3763
-
-db:
-  type: sqlite # sqlite or mongodb

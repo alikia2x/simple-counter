@@ -1,11 +1,7 @@
-FROM node:14
+FROM oven/bun:alpine AS base
+WORKDIR /usr/src/app
 
-WORKDIR /app
-
-COPY . .
-
-RUN yarn install
-
-EXPOSE 3000
-
-CMD ["yarn", "start"]
+COPY main.ts .
+USER bun
+EXPOSE 3000/tcp
+ENTRYPOINT [ "bun", "run", "main.ts" ]
