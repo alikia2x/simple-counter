@@ -1,7 +1,7 @@
 version: '3'
 services:
   counter:
-    image: ghcr.io/alikia2x/simple-counter:latesst
+    image: ghcr.io/alikia2x/simple-counter:latest
     volumes:
       - ./count.db:/usr/src/app/count.db
     ports:
