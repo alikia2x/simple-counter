@@ -3,6 +3,6 @@ services:
   counter:
     image: ghcr.io/alikia2x/simple-counter:latest
     volumes:
-      - ./count.db:/usr/src/app/count.db
+      - ./count.db:/app/count.db
     ports:
       - "127.0.0.1:3000:3000"
